@@ -34,10 +34,10 @@ import java.io.FileReader;
 %}
         
 %%
-"[a-z][a-z0-9_A-Z]+ \'[.]*\'? "{tokens.add("ATOMO"); System.out.println("ATOMO");}
-"\'[.]*\'?" {tokens.add("ATOMO"); System.out.println("ATOMO");}
-"[`~!@#$%^&*()_°¬|+\-=?;:'",.<>\{\}\[\]\\\/]*"{tokens.add("ATOMO"); System.out.println("ATOMO");}
-"%"     {tokens.add(";"); System.out.println("MOD");}
-[0-9]   {tokens.add("NUM"); System.out.println("NUMERO");}
+[a-z][a-z0-9_A-Z]+ \'[.]*\'?{tokens.add("ATOMO"); System.out.println("ATOMO");}
+\'[.]*\'? {tokens.add("ATOMO"); System.out.println("ATOMO");}
+[`~!@#$%^&*()_°¬|+\-=?;:',.<>\{\}\[\]\\\/]*"{tokens.add("ATOMO"); System.out.println("ATOMO");}
+[A-Z_][a-z0-9_A-Z]*{tokens.add("VARIABLE"); System.out.println("VARIABLE");}
+[-+]?(\d{0,})(?:\.(\d{0,}))?{tokens.add("PTO_FIJO"); System.out.println("PTO_FIJO");}
 ^_[a-zA-Z] {tokens.add("ID"); System.out.println("IDENTIFICADOR");}
 [a-zA-Z] {tokens.add("ID"); System.out.println("IDENTIFICADOR");}

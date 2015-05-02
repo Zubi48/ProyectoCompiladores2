@@ -36,7 +36,7 @@ import java.io.FileReader;
 %%
 [a-z][a-z0-9_A-Z]+                              {tokens.add("ATOMO"); System.out.println("ATOMO 1");}
 \'[.]*\'?                                       {tokens.add("ATOMO"); System.out.println("ATOMO 2");}
-[`~!@#$%^&*()_°¬|+\-=?;:',.<>\{\}\[\]\\\/]*     {tokens.add("ATOMO"); System.out.println("ATOMO 3");}
+[`~!@#$%\^&*()_°¬|+\-=?;:',.<>\{\}\[\]\\\/]+    {tokens.add("ATOMO"); System.out.println("ATOMO 3");}
 [A-Z_][a-z0-9_A-Z]*                             {tokens.add("VARIABLE"); System.out.println("VARIABLE");}
 [-+]?([0-9]*)(\.([0-9]*))+                      {tokens.add("PTO_FIJO"); System.out.println("PTO_FIJO");}
 ":-"                                            {tokens.add(":-"); System.out.println("implica");}

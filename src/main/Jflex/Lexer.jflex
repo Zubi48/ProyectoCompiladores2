@@ -34,9 +34,9 @@ import java.io.FileReader;
 %}
         
 %%
-"<"     {tokens.add("<"); System.out.println("MENOR QUE");}
-">"     {tokens.add(">"); System.out.println("MAYOR QUE");}
-"=="    {tokens.add("=="); System.out.println("IGUAL");}
+"[a-z][a-z0-9_A-Z]+ \'[.]*\'? "{tokens.add("ATOMO"); System.out.println("ATOMO");}
+"\'[.]*\'?" {tokens.add("ATOMO"); System.out.println("ATOMO");}
+"[`~!@#$%^&*()_°¬|+\-=?;:'",.<>\{\}\[\]\\\/]*"{tokens.add("ATOMO"); System.out.println("ATOMO");}
 "%"     {tokens.add(";"); System.out.println("MOD");}
 [0-9]   {tokens.add("NUM"); System.out.println("NUMERO");}
 ^_[a-zA-Z] {tokens.add("ID"); System.out.println("IDENTIFICADOR");}

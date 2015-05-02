@@ -1,4 +1,16 @@
-padre padre0madre raices_reales1  
-'Real compleja' '&_'
+padre 
+padre0madre 
+raices_reales1  
+'Real compleja'
+'&_'
 >=&!-->
-Luis X _1 Raiz_1
+Luis
+X 
+_1
+Raiz_1
+1.2
+3.4556
+12.345
+-1.23
++123.23
+:-

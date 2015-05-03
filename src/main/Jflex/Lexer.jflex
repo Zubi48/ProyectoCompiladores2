@@ -34,12 +34,11 @@ import java.io.FileReader;
 %}
         
 %%
-[a-z][a-z0-9_A-Z]+ \'[.]*\'?{tokens.add("ATOMO"); System.out.println("ATOMO");}
-\'[.]*\'? {tokens.add("ATOMO"); System.out.println("ATOMO");}
-[`~!@#$%^&*()_°¬|+\-=?;:',.<>\{\}\[\]\\\/]*"{tokens.add("ATOMO"); System.out.println("ATOMO");}
-[A-Z_][a-z0-9_A-Z]*{tokens.add("VARIABLE"); System.out.println("VARIABLE");}
-[-+]?(\d{0,})(?:\.(\d{0,}))?{tokens.add("PTO_FIJO"); System.out.println("PTO_FIJO");}
-^_[a-zA-Z] {tokens.add("ID"); System.out.println("IDENTIFICADOR");}
-[a-zA-Z] {tokens.add("ID"); System.out.println("IDENTIFICADOR");}
+[a-z][a-z0-9_A-Z]+                                 {tokens.add("ATOMO"); System.out.println("ATOMO Minuscula");}
+'[.]*'?                                            {tokens.add("ATOMO"); System.out.println("ATOMO Apostrofes");}
+[`~!@#$%\^&*()_°¬|+\-=?;:',.<>\{\}\[\]\\\/]+       {tokens.add("ATOMO"); System.out.println("ATOMO Especiales");}
+[A-Z_][a-z0-9_A-Z]*                                {tokens.add("VARIABLE"); System.out.println("VARIABLE");}
+[-+]?[0-9]*\.([0-9]*)?                             {tokens.add("PTO_FIJO"); System.out.println("PTO_FIJO");}
 ["`~!@#$%^&*()_°¬|+\-=?;:',.<>\{\}\[\]\\\/a-zA-Z"] {tokens.add("CADENA"); System.out.println("CADENA");}
-[+-d] {tokens.add("ENTERO"); System.out.println("ENTERO");}
+[+-]?[0-9]+                                        {tokens.add("ENTERO"); System.out.println("ENTERO");}
+[+-]?[0-9]*\.[0-9]+[E|e][0-9]+                     {tokens.add("PTO_FLOT"); System.out.println("PTO_FLOT");}

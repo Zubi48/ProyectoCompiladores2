@@ -37,4 +37,6 @@ import java.io.FileReader;
 [a-z][a-z0-9_A-Z]+                		{tokens.add("ATOMO"); System.out.println("ATOMO Minuscula");}
 (['].*['])                                      {tokens.add("ATOMO"); System.out.println("ATOMO Apostrofes");}
 [^A-Za-z0-9\s]+                                 {tokens.add("ATOMO"); System.out.println("ATOMO Especiales");}
-^[A-Z_][a-z0-9_A-Z]+                            {tokens.add("VARIABLE"); System.out.println("VARIABLE");}
+[A-Z_][a-z0-9_A-Z]*                             {tokens.add("VARIABLE"); System.out.println("VARIABLE");}
+[+-]?[0-9]+\.[0-9]+                             {tokens.add("PTO_FIJO"); System.out.println("PTO_FIJO");}
+[0-9]+[\.]?[0-9]?[e|E][0-9]+                    {tokens.add("PTO_FLOTANTE"); System.out.println("PTO_FLOTANTE");}

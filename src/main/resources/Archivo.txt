@@ -3,16 +3,4 @@ padre0madre
 raices_reales1  
 'Real compleja'
 '&_'
->=&!-->
-Luis
-X 
-_1
-Raiz_1
-1.2
-3.4556
-12.345
--1.23
-+123.23
-4E5
-9.2E8
-5e9
+!"#$%&

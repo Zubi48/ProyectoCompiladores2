@@ -41,3 +41,5 @@ import java.io.FileReader;
 [-+]?(\d{0,})(?:\.(\d{0,}))?{tokens.add("PTO_FIJO"); System.out.println("PTO_FIJO");}
 ^_[a-zA-Z] {tokens.add("ID"); System.out.println("IDENTIFICADOR");}
 [a-zA-Z] {tokens.add("ID"); System.out.println("IDENTIFICADOR");}
+["`~!@#$%^&*()_°¬|+\-=?;:',.<>\{\}\[\]\\\/a-zA-Z"] {tokens.add("CADENA"); System.out.println("CADENA");}
+[+-d] {tokens.add("ENTERO"); System.out.println("ENTERO");}

@@ -40,3 +40,7 @@ import java.io.FileReader;
 [A-Z_][a-z0-9_A-Z]*                             {tokens.add("VARIABLE"); System.out.println("VARIABLE");}
 [+-]?[0-9]+\.[0-9]+                             {tokens.add("PTO_FIJO"); System.out.println("PTO_FIJO");}
 [0-9]+[\.]?[0-9]?[e|E][0-9]+                    {tokens.add("PTO_FLOTANTE"); System.out.println("PTO_FLOTANTE");}
+[\"](.)*[\"]                                    {tokens.add("CADENA"); System.out.println("CADENA");}
+[+-]?[0-9]+                                     {tokens.add("ENTERO"); System.out.println("ENTERO");}
+[\[](.)*[,]?(.)*[\]]                            {tokens.add("LISTA"); System.out.println("LISTA");}
+[a-z]*([\(](.)*[,]?(.)*[\)])                    {tokens.add("PREDICADO"); System.out.println("PREDICADO");}

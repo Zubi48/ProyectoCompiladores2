@@ -16,3 +16,16 @@ Raiz_1
 4E5
 9.2E8
 5e9
+" " 
+"Hola"
+"$&$"
+5 
++5 
+-500 
++900
+[ ] 
+[hola,23,"alfa"] 
+[A,b,c,(X)d]
+(x, Luis) 
+invierte([1,2,3], Lisa)
+concatena("hola","?")

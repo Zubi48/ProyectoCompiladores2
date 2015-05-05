@@ -47,3 +47,9 @@ import java.io.FileReader;
 [+-]?[0-9]+                         {tokens.add("ENTERO"); System.out.println("ENTERO");}
 [\[](.)*[,]?(.)*[\]]                {tokens.add("LISTA"); System.out.println("LISTA");}
 [a-z]*([\(](.)*[,]?(.)*[\)])        {tokens.add("PREDICADO"); System.out.println("PREDICADO");}*/
+","                                 {tokens.add("COMA"); System.out.println("COMA");}
+";"                                 {tokens.add("PUNTO_COMA"); System.out.println("PUNTO_COMA");}
+"("                                 {tokens.add("PAR_DER"); System.out.println("PAR_DER");}
+")"                                 {tokens.add("PAR_IZQ"); System.out.println("PAR_IZQ");}
+":-"                                {tokens.add("IMPLICA"); System.out.println("IMPLICA");}
+"."                                 {tokens.add("PUNTO"); System.out.println("PUNTO");}
